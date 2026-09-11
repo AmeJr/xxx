@@ -8,11 +8,9 @@ def eh_primo(n):
         return True
     if n % 2 == 0:
         return False
-    divisor = 3
-    while divisor * divisor <= n:
+    for divisor in range(3, int(n ** 0.5) + 1, 2):
         if n % divisor == 0:
             return False
-        divisor += 2
     return True
 
 
